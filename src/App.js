@@ -6,8 +6,11 @@ import landing_03 from './assets/jpg3.jpg';
 import Hero from './components/Hero';
 import Navbar from "./components/Navbar";
 import Slider from './components/Slider.js';
+import Formulario from './components/Formulario';
+
 
 function App() {
+
   const navbarLinks = [
     { url: "#", title: "Inicio" },
     { url: "#", title: "Servicios" },
@@ -15,26 +18,28 @@ function App() {
   ];
   return (
     <div className="App"> 
+      
       <Navbar navbarLinks={navbarLinks} />
       <Hero imageSrc={landing_01} />
 
       <Slider 
       imageSrc={landing_02} 
-      title={"Servicio 1"} 
+      title={"Conectamos a las personas con su negocio. Sitios web y aplicaciones."} 
       subtitule={"Servicio1"}
+      
       
 
       />
 
       <Slider 
       imageSrc={landing_03} 
-      title={"Servicio 2"} 
+      title={"Atraemos los clientes, posicionamiento de marca"}
       subtitule={"Servicio2"} 
       flipped={true}  
 
       /> 
       {/* // flipped={true} para que se muestre en el otro lado del slider (en este caso el slider 2) */}
-      
+      <Formulario />
     
     </div> 
   
